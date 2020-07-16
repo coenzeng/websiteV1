@@ -1,0 +1,278 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+/*social media icons*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+
+body{
+	font-family: 'Lato', sans-serif;
+	line-height: 180%;
+	background-color:rgb(15,4,81);
+}
+
+@font-face {
+	font-family: azonix;
+	src: url(Neon.otf);
+  }
+section{
+	margin: 100px 0 0px 0;
+}
+
+.white{
+	color: rgb(255, 255, 255);
+}
+.pink{
+	color: rgb(206, 167, 95);
+}
+h1{
+	margin-top: 20px;
+	color: rgb(91,241,251);
+	font-size: 30px;
+	padding: 10px 0 20px 0;
+	/*padding top is 80 so that the nav bar will scroll to the top of the padding and not directly on the h1*/
+}
+h2{
+	font-size: 70px;
+	color: rgb(91,241,251);
+	line-height: 150%;
+}
+
+h3{/*for the name*/
+	font-family: 'Lato', sans-serif;
+	padding: 50px 0 40px 0;
+	font-size: 1.8vw;
+	color: rgb(246,41,137);
+}
+
+
+h4{/*big title*/
+	font-family: 'Lato', sans-serif;
+	font-size: 6vw;
+	z-index: 999999;
+	color: yellow;
+}
+  p{
+	  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	  color: rgb(255, 255, 255);
+	  font-size: 20px;
+	  margin: 20px 0px 20px 0px;
+  }
+
+  .pic{
+	background-image: url("images/retro3.jpg");
+	background-repeat: no-repeat;
+  background-size: 100% auto;
+  margin: 0;
+  
+  }
+  .name{
+	  padding-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 999;
+	
+  }
+
+  /*for images on front page*/
+  .row {
+	margin-top: 8px;
+	right: 0px;
+	position: absolute;
+	clip-path: polygon(55% 0, 100% 0, 100% 100%, 45% 100%);
+	display: flex;
+	flex-wrap: wrap;
+  }
+  .column {
+	  flex: 19%;
+	max-width: 20%;
+	padding: 0 4px;
+  }
+  
+  .column img {
+	  
+	opacity: 60%;
+	vertical-align: middle;
+	width: 100%;
+	margin: 4px 0;
+  }
+
+  .column img:hover {
+	position: relative;
+	opacity: 100%;
+	z-index: 99999999;
+  }
+
+nav{
+	position:absolute;
+	top: 350px;
+	left: 500px;
+	display: block;
+}
+
+.navlink{
+	line-height: 200%;
+	padding: 20px;
+	font-size: 22px;
+	text-decoration: none;
+	color: rgb(49, 49, 49);
+	left: 500px;
+}
+
+  a:hover{
+	  color: rgb(0, 102, 255);
+  }
+  /*for skills section*/
+  table {
+	font-family: 'Nunito', sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	color: rgb(100,255,218);
+	font-size: 18px;
+  }
+
+
+  .row1 {
+	
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+	margin:0px 100px 0px 100px;
+  }
+
+  .column1 {
+	flex: 15%;
+	max-width: 16%;
+	padding: 0 5px;
+  }
+
+  .column1 img {
+	border-radius: 15px;
+	margin-top: 10px;
+	vertical-align: middle;
+	width: 100%;
+  }
+  
+.container1{
+
+	margin: -50px 500px 0px 200px;
+}
+
+#artwork{
+	text-align: center;
+}
+  /*animations*/
+
+  .row > * {/*before the page has loaded*/
+	transform: translateY(800px);
+	opacity: 0;
+  }
+
+
+  .row {
+	position: relative;
+  }
+
+  .row::after {
+	content: "";
+	position: absolute;
+	z-index: 99999;
+
+  }
+
+  .loaded .row > *{
+	animation: fadeIn 1.5s ease-out 0.7s forwards, slideIn 5s cubic-bezier(0,.89,.27,.99) forwards;
+  }
+ 
+ 
+  @keyframes fadeIn {
+	10% {
+	  opacity: 0;
+	}
+  
+	100% {
+	  opacity: 1;
+	}
+  }
+
+  @keyframes slideIn {
+	100% {
+	  transform: translateY(0);
+	}
+  }
+/*for the social media icons*/
+.social-menu{
+  text-align: center;
+  align-items: center;
+  margin: 0 400px 0 400px;
+}
+.social-menu ul {
+      padding: 50px 0 50px 0;
+      display: inline-flex;
+  }
+ 
+  .social-menu ul li {
+      margin: 0 10px;
+  }
+  .social-menu ul li .fa {
+      color: #000000;
+      font-size: 25px;
+      line-height: 50px;
+      transition: .5s;
+  }
+  .social-menu ul li .fa:hover {
+      color: #ffffff;
+  }
+  .social-menu ul li a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgb(255, 255, 255);
+      text-align: center;
+      transition: 0.5s;
+      box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .github a:hover{
+      background-color: #4e4e4e;
+  }
+  .linkedin a:hover {
+    background-color: #0077B5;
+      
+  }
+  .email a:hover {
+    background-color: #00d346;
+  }
